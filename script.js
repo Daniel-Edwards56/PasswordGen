@@ -1,9 +1,8 @@
-// This is and empty string to store object choices.
-var randomChar = "";
+
 // An object to house the charecters, title of choices and boolean of the choices.
 var charObj = [
   {
-    char: "!@#$%^&*()_+-=\/?,.{}[]",
+    char: "!@#$%^&*()_+-=/\\?,.{}[]",
     category: "Special Characters",
     choice: false
   },
@@ -24,12 +23,15 @@ var charObj = [
   },
 ]
 
+
 // Main function that's called on onClick when hitting Generate Password on the app page.
 var generateBtn = () => {
   //Prompt for to pick between password legnth of 8 to 128, if outside bounds sends an error.
 var passwordLength = parseInt(prompt("Please enter a number between 8 and 128"));
 // Empty variable string to store value for getElementByID
 var passwordString = "";
+// This is and empty string to store object choices.
+var randomChar = "";
 //If within bounds, prompts user to select categories and store responses
  if (passwordLength >= 8 && passwordLength <= 128){
    charObj.forEach(set => {
