@@ -37,6 +37,9 @@ var passwordString = "";
     if (useChar === "YES"){
       set.choice = true;
     }
+    else if (useChar === "NO"){
+      set.choice = false;
+    }
     if (set.choice){
       randomChar = randomChar + set.char;
     }
